@@ -6,21 +6,12 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-list>
+  <ion-list *ngFor="let recipe of recipes">
     <ion-item>
       <ion-avatar slot="start">
-        <ion-img [src]=""></ion-img>
+        <ion-img [src]="recipe.imageUrl"></ion-img>
       </ion-avatar>
-      <ion-label> Desart Food Recipe </ion-label>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img [src]=""></ion-img>
-      </ion-avatar>
-      <ion-label> Mixed Vasitable Food Recipe </ion-label>
+      <ion-label> {{ recipe.title }} </ion-label>
     </ion-item>
   </ion-list>
 
